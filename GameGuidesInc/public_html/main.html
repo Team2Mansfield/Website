@@ -1,0 +1,400 @@
+<!DOCTYPE html> <!-- -->
+<html>
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <title>GameGuidesInc</title>
+
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <link href="iconic.css" media="screen" rel="stylesheet" type="text/css" />
+        <script src="prefix-free.js"></script>
+        <!-- Internet Explorer HTML5 enabling code: -->
+
+        <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        
+        <style type="text/css">
+        .clear {
+          zoom: 1;
+          display: block;
+        }
+        </style>
+
+        
+        <![endif]-->
+        <style>
+            /* Full-width input fields */
+            input[type=text], input[type=password] {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }
+
+            /* Set a style for all buttons */
+            button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+            }
+
+            button:hover {
+                opacity: 0.8;
+            }
+
+            /* Extra styles for the cancel button */
+            .cancelbtn {
+                width: auto;
+                padding: 10px 18px;
+                background-color: #f44336;
+            }
+
+            /* Center the image and position the close button */
+            .imgcontainer {
+                text-align: center;
+                margin: 24px 0 12px 0;
+                position: relative;
+            }
+
+            img.avatar {
+                width: 40%;
+                border-radius: 50%;
+            }
+
+            .container {
+                padding: 16px;
+            }
+
+            span.psw {
+                float: right;
+                padding-top: 16px;
+            }
+
+            /* The Modal (background) */
+            .modal {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+                padding-top: 60px;
+            }
+
+            /* Modal Content/Box */
+            .modal-content {
+                background-color: #fefefe;
+                margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+                border: 1px solid #888;
+                width: 80%; /* Could be more or less, depending on screen size */
+            }
+
+            /* The Close Button (x) */
+            .close {
+                position: absolute;
+                right: 25px;
+                top: 0;
+                color: #000;
+                font-size: 35px;
+                font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: red;
+                cursor: pointer;
+            }
+
+            /* Add Zoom Animation */
+            .animate {
+                -webkit-animation: animatezoom 0.6s;
+                animation: animatezoom 0.6s
+            }
+
+            @-webkit-keyframes animatezoom {
+                from {-webkit-transform: scale(0)} 
+                to {-webkit-transform: scale(1)}
+            }
+
+            @keyframes animatezoom {
+                from {transform: scale(0)} 
+                to {transform: scale(1)}
+            }
+
+            /* Change styles for span and cancel button on extra small screens */
+            @media screen and (max-width: 300px) {
+                span.psw {
+                    display: block;
+                    float: none;
+                }
+                .cancelbtn {
+                    width: 100%;
+                }
+            }
+        </style>
+    <body>
+        <script src="validation.js"></script>
+        <br>
+        <br>
+
+        <button onclick="document.getElementById('id01').style.display = 'block'" style="width:auto;">Login</button>
+
+        <div id="id01" class="modal">
+
+            <form class="modal-content animate" action="/action_page.php" autocomplete="on">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display = 'none'" class="close" title="Close Modal">&times;</span>
+                    <img src="https://cdn4.iconfinder.com/data/icons/man-and-woman/154/hipster-man-login-fashion-skin-avatar-512.png" alt="Avatar" class="avatar">
+                </div>
+
+                <div class="container">
+                    <label><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+
+                    <label><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <button type="submit">Login</button>
+                    <input type="checkbox" checked="checked"> Remember me
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id01').style.display = 'none'" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
+
+        <button onclick="document.getElementById('id02').style.display = 'block'" style="width:auto;">Register</button>
+
+        <div id="id02" class="modal">
+
+            <form class="modal-content animate" action="/action_page.php" >
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id02').style.display = 'none'" class="close" title="Close Modal">&times;</span>
+                    <img src="https://cdn4.iconfinder.com/data/icons/man-and-woman/154/hipster-man-login-fashion-skin-avatar-512.png" alt="Avatar" class="avatar">
+                </div>
+
+                <div class="container">
+                    <label><b>Id:</b></label>
+                    <input type="text" placeholder="Enter Username" name="username" size="50" required>
+
+                    <label><b>Password</b></label>
+                    <input type="text" placeholder="Enter Adress" name="address" size="50" required>
+
+                    <label><b>Email:</b></label>
+                    <input type="text" placeholder= "Enter E-mail"name="email" size="50" required>
+
+                    <label><b>Country:</b></label>
+                    <select name="country">
+                        <option selected="" value="Default">(Please select a country)</option>
+                        <option value="AF">Australia</option>
+                        <option value="AL">Canada</option>
+                        <option value="DZ">India</option>
+                        <option value="AS">Russia</option>
+                        <option value="AD">USA</option>
+                    </select></li>
+                    <button type="submit" >Register</button>
+
+                </div>
+            </form>
+        </div>
+        <script>
+
+
+            // Get the modal
+            var modal = document.getElementById('id02');
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+            // Get the modal
+            var modal = document.getElementById('id01');
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+        </script>
+
+
+    </head>
+<body>
+
+    <section id="page"> <!-- Defining the #page section with the section tag -->
+
+        <header> <!-- Defining the header section of the page with the appropriate tag -->
+
+            <hgroup>
+                <h1>GameGuidesInc.</h1>
+                <h3>Find your games here</h3>
+            </hgroup>
+
+            <div class="wrap">
+
+                <nav>
+                    <ul class="menu">
+                        <li><a href="file:///E:/GameGuidesInc/public_html/main.html"><span class="home"></span> Home</a></li>
+                        <li><a href="#"><span class="plus-alt"></span> About</a>
+                            <ul>
+                                <li><a href="file:///E:/GameGuidesInc/public_html/History.html">Company History</a></li>
+                                <li><a href="file:///E:/GameGuidesInc/public_html/Team2.html">Meet the team</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><span class="magnifying-glass"></span> Services</a>
+                            <ul>
+                                <li><a href="file:///E:/GameGuidesInc/public_html/GameGuides.html">Game Guides</a></li>
+                                <li><a href="file:///E:/GameGuidesInc/public_html/RetroGames.html">Retro Games</a></li>
+                                <li><a href="#">Copyrighting</a></li>
+                            </ul>
+                        </li>
+                        <li><a href=""><span class="map-pin"></span> Popular</a>
+                            <ul>
+                                <li><a href="file:///E:/GameGuidesInc/public_html/Ark.html">Ark</a></li>
+                                <li><a href="file:///E:/GameGuidesInc/public_html/Battlefield">Battlefield</a></li>
+                                <li><a href="file:///E:/GameGuidesInc/public_html/CallOfDuty.html">Call Of Duty</a></li>
+                                <li><a href="file:///E:/GameGuidesInc/public_html/ForHonor.html">For Honor</a></li>
+                                <li><a href="file:///E:/GameGuidesInc/public_html/MassEffect.html">Mass Effect Andromeda</a></li>
+                                <li><a href="file:///E:/GameGuidesInc/public_html/Overwatch.html">Overwatch</a></li>
+                                <li><a href="file:///E:/GameGuidesInc/public_html/Warframe.html">Warframe</a></li>
+                            </ul>
+                        </li>
+                        <li><a href=""><span class="mail"></span> Contact</a>
+                            <ul>
+                                <li><a href="file:///E:/GameGuidesInc/public_html/Contact.html">Contact Us</a></li>
+                               
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </nav>
+            </div>
+
+        </header>
+
+        <section id="articles"> <!-- A new section with the articles -->
+
+            <!-- Article 1 start -->
+
+            <div class="line"></div>  <!-- Dividing line -->
+
+            <article id="article1"> <!-- The new article tag. The id is supplied so it can be scrolled into view. -->
+                <h2>Game Guides</h2>
+
+                <div class="line"></div>
+
+                <div class="articleBody clear">
+
+                    <figure> <!-- The figure tag marks data (usually an image) that is part of the article -->
+                        <a href="file:///E:/GameGuidesInc/public_html/GameGuides.html"><img src="https://s-media-cache-ak0.pinimg.com/originals/c5/9a/d2/c59ad2bd4ad2fbacd04017debc679ddb.gif" width="620" height="340" /></a>
+                    </figure>
+
+                    <p></p>
+                    <p></p>
+                </div>
+            </article>
+
+            <!-- Article 1 end -->
+
+
+            <!-- Article 2 start -->
+
+            <div class="line"></div>
+
+            <article id="article2">
+                <h2>Retro Games</h2>
+
+                <div class="line"></div>
+
+                <div class="articleBody clear">
+                    <figure>
+                        <a href="E:/GameGuidesInc/public_html/RetroGames.html"><img src="https://lumiere-a.akamaihd.net/v1/images/gt_lol_abtest_arcade_6629666d.gif" width="620" height="340" /></a>
+                    </figure>
+
+                    <p></p>
+                    <p></p>
+                </div>
+            </article>
+
+            <!-- Article 2 end -->
+
+            <!-- Article 3 start -->
+
+            <div class="line"></div>
+
+            <article id="article3">
+                <h2>Popular Games</h2>
+
+                <div class="line"></div>
+
+                <div class="articleBody clear">
+                    <figure>
+                        <a href="file:///E:/GameGuidesInc/public_html/GameGuides.html"><img src="https://cdn.dribbble.com/users/43762/screenshots/1193020/line-graph-dribbbble.gif" width="620" height="340" /></a>
+                    </figure>
+
+                    <p></p>
+                    <p></p>
+                </div>
+            </article>
+
+            <!-- Article 3 end -->
+            <!-- Article 4 start -->
+
+            <div class="line"></div>
+
+            <article id="article4">
+                <h2>About Us</h2>
+
+                <div class="line"></div>
+
+                <div class="articleBody clear">
+                    <figure>
+                        <a href="file:///E:/GameGuidesInc/public_html/AboutUs.html"><img src="https://i.yuki.la/wg/1480845344223.gif" width="620" height="340" /></a>
+                    </figure>
+
+                    <p></p>
+                    <p></p>
+                </div>
+            </article>
+
+            <!-- Article 4 end -->
+        </section>
+
+        <footer> <!-- Marking the footer section -->
+
+            <div class="line"></div>
+
+            <p>Copyright 2017 - Team 2</p> <!-- Change the copyright notice -->
+
+            <a href="#" class="up">Go UP</a>
+            <a href="https://github.com/Team2Mansfield" class="by">Team 2</a>
+
+
+        </footer>
+
+    </section> <!-- Closing the #page section -->
+
+    <!-- JavaScript Includes -->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <script src="jquery.scrollTo-1.4.2/jquery.scrollTo-min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
